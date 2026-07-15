@@ -101,6 +101,8 @@ A word that appears **only once** in an entire corpus or dataset. Such rare word
 
 ## Representing Words as One-Hot Vectors
 
+*Reference: [ChatGPT conversation on representing words as one-hot vectors](https://chatgpt.com/s/t_6a55e35b3b7881918c3c5826c0e20fd8)*
+
 A **one-hot vector** is a sparse vector representation of a word in which:
 - The vector length equals the vocabulary size.
 - The entry corresponding to the word's assigned index is `1`.
@@ -116,6 +118,12 @@ It **uniquely identifies** a word, but encodes **no** semantic or contextual inf
 - **Sparse & inefficient**: creates massive, mostly-empty vectors (e.g., 9,999 zeros for every 10,000-word vocabulary) — very inefficient in memory and computation for large vocabularies.
 
 This limitation is exactly what motivates the move to **embeddings** — denser vectors that actually capture meaning and relationships between words, instead of treating them as disconnected labels.
+
+### The Goal of Embeddings
+
+*Reference: [ChatGPT conversation on the goal of embeddings](https://chatgpt.com/s/t_6a55e6ae291c8191ade88e86bba8a350)*
+
+Word embeddings (Word2Vec, GloVe, FastText) learn **dense vectors from data** — the whole point being to move past sparse, meaningless one-hot representations toward vectors that actually encode a word's meaning and its relationships to other words.
 
 ## Word2Vec's Efficiency Trick: Negative Sampling
 
